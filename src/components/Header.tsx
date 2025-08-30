@@ -53,9 +53,9 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="/placeholder.png" 
+              src="/acumatic-logo.png" 
               alt="Acumatic Logo" 
-              className="h-10 w-auto"
+              className="h-10 w-auto object-contain"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
                 e.currentTarget.nextElementSibling!.style.display = 'block';

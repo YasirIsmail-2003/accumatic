@@ -11,9 +11,9 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img 
-                src="/placeholder.png" 
+                src="/acumatic-logo.png" 
                 alt="Acumatic Logo" 
-                className="h-8 w-auto filter brightness-0 invert"
+                className="h-8 w-auto filter brightness-0 invert object-contain"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                   e.currentTarget.nextElementSibling!.style.display = 'block';
