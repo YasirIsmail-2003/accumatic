@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Eye, EyeOff, User, Mail, Lock } from 'lucide-react';
-import { signUp, signIn } from '../lib/supabase';
+import { signUp, signIn, isSupabaseConfigured } from '../lib/supabase';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
@@ -81,6 +81,11 @@ const AuthPage: React.FC = () => {
               : 'Welcome back to Accumatic'
             }
           </p>
+          {!isSupabaseConfigured && (
+            <div className="mt-4 rounded-md bg-yellow-50 p-3 text-left">
+              <p className="text-sm text-yellow-800">Supabase is not configured — authentication is currently disabled. To enable, copy <code className="font-mono">.env.example</code> to <code className="font-mono">.env</code> and set <code className="font-mono">VITE_SUPABASE_URL</code> and <code className="font-mono">VITE_SUPABASE_ANON_KEY</code>.</p>
+            </div>
+          )}
         </div>
 
         <div className="bg-white rounded-lg shadow-lg p-8">
@@ -181,10 +186,10 @@ const AuthPage: React.FC = () => {
 
               <button
                 type="submit"
-                disabled={signUpForm.formState.isSubmitting}
+                disabled={signUpForm.formState.isSubmitting || !isSupabaseConfigured}
                 className="w-full bg-[#8A1538] hover:bg-[#7A1230] disabled:bg-gray-400 text-white py-3 px-6 rounded-lg font-semibold transition-colors"
               >
-                {signUpForm.formState.isSubmitting ? 'Creating Account...' : 'Create Account'}
+                {!isSupabaseConfigured ? 'Disabled - Supabase not configured' : (signUpForm.formState.isSubmitting ? 'Creating Account...' : 'Create Account')}
               </button>
             </form>
           ) : (
@@ -238,10 +243,10 @@ const AuthPage: React.FC = () => {
 
               <button
                 type="submit"
-                disabled={signInForm.formState.isSubmitting}
+                disabled={signInForm.formState.isSubmitting || !isSupabaseConfigured}
                 className="w-full bg-[#8A1538] hover:bg-[#7A1230] disabled:bg-gray-400 text-white py-3 px-6 rounded-lg font-semibold transition-colors"
               >
-                {signInForm.formState.isSubmitting ? 'Signing In...' : 'Sign In'}
+                {!isSupabaseConfigured ? 'Disabled - Supabase not configured' : (signInForm.formState.isSubmitting ? 'Signing In...' : 'Sign In')}
               </button>
             </form>
           )}

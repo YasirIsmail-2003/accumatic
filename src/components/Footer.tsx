@@ -11,8 +11,8 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img 
-                src="/public/Acumatic_updated tranparent.fw (1).png" 
-                alt="Accumatic Logo" 
+                src="/placeholder.png" 
+                alt="Acumatic Logo" 
                 className="h-8 w-auto filter brightness-0 invert"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                 className="text-xl font-bold hidden"
                 style={{ display: 'none' }}
               >
-                Accumatic
+                Acumatic
               </span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">

@@ -23,6 +23,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <img
           src={product.image_url}
           alt={product.name}
+          onError={(e) => {
+            const target = e.currentTarget as HTMLImageElement;
+            // fallback to a generic placeholder if the product image is missing
+            target.src = '/placeholder.png';
+          }}
           className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">

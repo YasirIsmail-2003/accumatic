@@ -7,6 +7,8 @@ export interface Product {
   image_url: string;
   features: string[];
   specifications: Record<string, string>;
+  installation_instructions?: string; // HTML or plain text
+  instruction_images?: string[]; // additional image urls specific to install instructions
   stock_quantity: number;
   created_at: string;
   updated_at: string;

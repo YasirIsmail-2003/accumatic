@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ShoppingCart, Heart, Share2, Check, Star } from 'lucide-react';
+import { ShoppingCart, Heart, Share2, Check, Star } from 'lucide-react';
 import { products } from '../data/products';
 import { useCart } from '../contexts/CartContext';
 import ProductCard from '../components/ProductCard';
@@ -12,6 +12,66 @@ const ProductDetailPage: React.FC = () => {
   const { addToCart } = useCart();
 
   const product = products.find(p => p.id === id);
+
+  const [instructionImages, setInstructionImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (!product) return;
+
+    const toTitleCaseId = (rawId: string) => {
+      return rawId
+        .split('-')
+        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+        .join('-');
+    };
+
+    const baseCandidates = [
+      product.id,
+      product.id.toUpperCase(),
+      toTitleCaseId(product.id),
+      // product name first token (e.g. "Acumatic-600 Magnetic Lock" -> "Acumatic-600")
+      (product.name.split(' ')[0] || product.id),
+    ];
+
+    const suffixes = [
+      ' instruct .png',
+      ' instruct.png',
+      ' instruct 1.png',
+      ' instruct 1 .png',
+      ' instruct 1  (1).png',
+      ' instruct 1  (2).png',
+      ' instruct 2.png',
+      ' instruct 2 .png',
+      ' instruct 3.png',
+      ' instruct 4.png',
+      '  instruct 3.png',
+      '  instruct 4.png'
+    ];
+
+    const candidates: string[] = [];
+    baseCandidates.forEach((base) => {
+      suffixes.forEach((suf) => candidates.push(`/${base}${suf}`));
+    });
+
+    // attempt to preload each candidate and keep only the ones that load
+    const checkImage = (src: string) =>
+      new Promise<string | null>((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(src);
+        img.onerror = () => resolve(null);
+        img.src = src;
+      });
+
+    (async () => {
+      const results = await Promise.all(candidates.map((c) => checkImage(c)));
+      const found = results.filter((r): r is string => Boolean(r));
+      // merge with any explicit instruction_images defined in the product data
+      const explicit = Array.isArray(product.instruction_images) ? product.instruction_images : [];
+      const merged = [...explicit, ...found];
+      // remove duplicates and set state
+      setInstructionImages(Array.from(new Set(merged)));
+    })();
+  }, [product]);
 
   if (!product) {
     return (
@@ -182,6 +242,20 @@ const ProductDetailPage: React.FC = () => {
             ))}
           </div>
         </div>
+
+        {/* Instruction / Installation Images (auto-detected) */}
+        {instructionImages.length > 0 && (
+          <div className="mt-8 bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Installation / Instruction Images</h2>
+            <div className="space-y-4">
+              {instructionImages.map((src) => (
+                <div key={src} className="bg-gray-50 p-4 rounded">
+                  <img src={src} alt="Instruction" className="w-full h-auto object-contain" />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Related Products */}
         {relatedProducts.length > 0 && (

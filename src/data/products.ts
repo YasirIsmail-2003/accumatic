@@ -1,452 +1,533 @@
 import { Product } from '../types';
 
 export const products: Product[] = [
-  // Magnetic Locks
-  {
-    id: 'acumatic-600',
-    name: 'Acumatic-600 Magnetic Lock',
-    description: 'High-security electromagnetic lock with 600kg holding force',
-    price: 450,
-    category: 'Magnetic Locks',
-    image_url: 'https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg?auto=compress&cs=tinysrgb&w=500',
-    features: [
-      '600kg holding force',
-      'Fail-safe operation',
-      'LED status indicator',
-      'Weatherproof design',
-      'Easy installation'
-    ],
-    specifications: {
-      'Holding Force': '600kg',
-      'Operating Voltage': '12V DC',
-      'Current Draw': '500mA',
-      'Operating Temperature': '-20°C to +55°C',
-      'Dimensions': '250 x 45 x 25mm'
-    },
-    stock_quantity: 25,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
-  },
-  {
-    id: 'acumatic-600l',
-    name: 'Acumatic-600L Magnetic Lock',
-    description: 'Long-body electromagnetic lock with 600kg holding force for wide doors',
-    price: 520,
-    category: 'Magnetic Locks',
-    image_url: 'https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg?auto=compress&cs=tinysrgb&w=500',
-    features: [
-      '600kg holding force',
-      'Extended body design',
-      'Fail-safe operation',
-      'LED status indicator',
-      'Suitable for wide doors'
-    ],
-    specifications: {
-      'Holding Force': '600kg',
-      'Operating Voltage': '12V DC',
-      'Current Draw': '500mA',
-      'Operating Temperature': '-20°C to +55°C',
-      'Dimensions': '350 x 45 x 25mm'
-    },
-    stock_quantity: 18,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
-  },
-  
-  // Electric Bolt Locks
-  {
-    id: 'acumatic-b850u',
-    name: 'Acumatic-B850U Electric Bolt Lock',
-    description: 'Universal electric bolt lock with adjustable backset',
-    price: 380,
-    category: 'Electric Bolt Locks',
-    image_url: 'https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=500',
-    features: [
-      'Universal design',
-      'Adjustable backset',
-      'Fail-secure operation',
-      'Silent operation',
-      'Easy retrofit installation'
-    ],
-    specifications: {
-      'Operating Voltage': '12V DC',
-      'Current Draw': '200mA',
-      'Backset': 'Adjustable 60-70mm',
-      'Operating Temperature': '-10°C to +55°C',
-      'Material': 'Stainless Steel'
-    },
-    stock_quantity: 32,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
-  },
-  
-  // Access Control Keypads
-  {
-    id: 'am-st-200em',
-    name: 'AM-ST-200EM Access Keypad',
-    description: 'Standalone access control keypad with EM card reader',
-    price: 280,
-    category: 'Access Control Keypads',
-    image_url: 'https://images.pexels.com/photos/5473955/pexels-photo-5473955.jpeg?auto=compress&cs=tinysrgb&w=500',
-    features: [
-      'EM card reader',
-      'PIN code access',
-      'Weatherproof IP65',
-      'Backlit keypad',
-      '1000 user capacity'
-    ],
-    specifications: {
-      'Card Type': 'EM 125KHz',
-      'User Capacity': '1000 users',
-      'Operating Voltage': '12V DC',
-      'Operating Temperature': '-20°C to +60°C',
-      'IP Rating': 'IP65'
-    },
-    stock_quantity: 45,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
-  },
-  
-  // Remote Controls & Receivers
+  // Remotes
   {
     id: 'am-b4',
-    name: 'AM-B4 Remote Control',
-    description: '4-button remote control for access systems',
-    price: 85,
-    category: 'Remote Controls & Receivers',
-    image_url: 'https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=500',
+    name: 'AM-B4 UNIVERSAL WIRELESS REMOTE (4 Button)',
+    description: 'Universal 4-button wireless remote control - 433MHz. Copy coding, suitable for access control and gates.',
+    price: 45,
+    category: 'Remote Controls',
+    image_url: '/AM-B4.png',
     features: [
-      '4 programmable buttons',
-      'Long range transmission',
-      'Low battery indicator',
-      'Compact design',
-      'Easy programming'
+      'Working frequency 433MHz',
+      'Transmitting distance 10-30 meters',
+      'Copy coding',
+      'Compact ABS housing'
     ],
     specifications: {
+      'Model': 'AM-B4',
+      'Dimension': '68 × 37 mm',
+      'Input voltage': '5-12 VDC',
+      'Output contact': 'NO/NC/COM',
       'Frequency': '433MHz',
-      'Range': 'Up to 100m',
-      'Battery': '12V A23',
-      'Buttons': '4',
-      'Dimensions': '65 x 35 x 12mm'
+      'Remote distance': '30m',
+      'Material': 'ABS',
+      'Working temperature': '-20 °C to 55 °C',
+      'Working humidity': '0 to 95% RH',
+      'Weight': '0.15kg'
     },
-    stock_quantity: 120,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
+    stock_quantity: 200,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
   },
   {
     id: 'am-b2',
-    name: 'AM-B2 Remote Control',
-    description: '2-button remote control for basic access control',
-    price: 65,
-    category: 'Remote Controls & Receivers',
-    image_url: 'https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=500',
+    name: 'AM-B2 UNIVERSAL WIRELESS REMOTE (2 Button)',
+    description: 'Universal 2-button wireless remote control - 433MHz. Copy coding, compact and reliable.',
+    price: 35,
+    category: 'Remote Controls',
+    image_url: '/AM-B2.png',
     features: [
-      '2 programmable buttons',
-      'Long range transmission',
-      'Low battery indicator',
-      'Compact design',
-      'Cost-effective solution'
+      'Working frequency 433MHz',
+      'Transmitting distance 30-50 meters',
+      'Study code 1527',
+      'Compact ABS housing'
     ],
     specifications: {
+      'Model': 'AM-B2',
+      'Dimension': '60 × 30 × 11 mm',
+      'Input voltage': '5-12 VDC',
+      'Output contact': 'NO/NC/COM',
       'Frequency': '433MHz',
-      'Range': 'Up to 100m',
-      'Battery': '12V A23',
-      'Buttons': '2',
-      'Dimensions': '65 x 35 x 12mm'
+      'Study code': '1527',
+      'Remote distance': '30m',
+      'Material': 'ABS',
+      'Working temperature': '-20 °C to 55 °C',
+      'Working humidity': '0 to 95% RH',
+      'Weight': '0.15kg'
     },
-    stock_quantity: 95,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
+    stock_quantity: 180,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
   },
-  {
-    id: 'am-rc-rt11',
-    name: 'AM-RC-RT11 Receiver',
-    description: 'Single channel wireless receiver for remote controls',
-    price: 120,
-    category: 'Remote Controls & Receivers',
-    image_url: 'https://images.pexels.com/photos/5473955/pexels-photo-5473955.jpeg?auto=compress&cs=tinysrgb&w=500',
-    features: [
-      'Single channel output',
-      'Learning function',
-      'LED status indicator',
-      'Relay output',
-      'Wide voltage range'
-    ],
-    specifications: {
-      'Frequency': '433MHz',
-      'Operating Voltage': '12-24V DC/AC',
-      'Output': 'Relay contact',
-      'Learning Capacity': '100 remotes',
-      'Dimensions': '85 x 55 x 20mm'
-    },
-    stock_quantity: 38,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
-  },
-  {
-    id: 'am-ur',
-    name: 'AM-UR Universal Receiver',
-    description: 'Multi-channel universal wireless receiver',
-    price: 180,
-    category: 'Remote Controls & Receivers',
-    image_url: 'https://images.pexels.com/photos/5473955/pexels-photo-5473955.jpeg?auto=compress&cs=tinysrgb&w=500',
-    features: [
-      '4 channel output',
-      'Universal compatibility',
-      'Learning function',
-      'Multiple output modes',
-      'External antenna support'
-    ],
-    specifications: {
-      'Frequency': '433MHz',
-      'Operating Voltage': '12-24V DC',
-      'Channels': '4',
-      'Learning Capacity': '200 remotes',
-      'Dimensions': '110 x 70 x 25mm'
-    },
-    stock_quantity: 22,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
-  },
-  
-  // Exit Buttons
-  {
-    id: 'am-901b',
-    name: 'AM-901B Exit Button',
-    description: 'Standard exit button for access control systems',
-    price: 45,
-    category: 'Exit Buttons',
-    image_url: 'https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=500',
-    features: [
-      'Momentary contact',
-      'Vandal resistant',
-      'Easy installation',
-      'Standard size',
-      'Reliable operation'
-    ],
-    specifications: {
-      'Contact Type': 'NO/NC',
-      'Operating Voltage': '12V DC',
-      'Material': 'Stainless Steel',
-      'Mounting': 'Surface/Flush',
-      'Dimensions': '86 x 86 x 20mm'
-    },
-    stock_quantity: 85,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
-  },
+
+  // Exit Buttons / Sensors
   {
     id: 'am-901b-r',
-    name: 'AM-901B-R Exit Button (Red)',
-    description: 'Red illuminated exit button for emergency exits',
-    price: 55,
+    name: 'AM-901B-R Infrared Sensor Exit Button (With Remote)',
+    description: 'Infrared no-touch sensor exit button with wireless remote. Dual activation: IR induction and remote control.',
+    price: 95,
     category: 'Exit Buttons',
-    image_url: 'https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=500',
+    image_url: '/AM-901B-R.png',
     features: [
-      'Red LED illumination',
-      'Emergency exit design',
-      'Vandal resistant',
-      'High visibility',
-      'Reliable operation'
+      'Infrared sensor activation (no touch)',
+      'Remote control operation (20m)',
+      'LED indication',
+      'Stainless steel front panel'
     ],
     specifications: {
-      'Contact Type': 'NO/NC',
-      'Operating Voltage': '12V DC',
-      'LED Color': 'Red',
-      'Material': 'Stainless Steel',
-      'Dimensions': '86 x 86 x 20mm'
+      'Model': 'AM-901B-R',
+      'Dimension': '86 × 86 mm',
+      'Remote size': '32 × 57 mm',
+      'Input voltage': '12/24 VDC',
+      'Output contact': 'NO/NC/COM',
+      'Remote distance': '20m',
+      'Infrared induction distance': '10-25 cm',
+      'Material': 'Stainless steel + ABS',
+      'Time delay': '5-30s',
+      'User capacity': '30'
     },
-    stock_quantity: 42,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
+    stock_quantity: 75,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
   },
   {
-    id: 'am-s86b',
-    name: 'AM-S86B Slim Exit Button',
-    description: 'Slim profile exit button for modern installations',
-    price: 65,
-    category: 'Exit Buttons',
-    image_url: 'https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=500',
-    features: [
-      'Slim profile design',
-      'Modern appearance',
-      'Touch sensitive',
-      'LED indicator',
-      'Easy installation'
-    ],
-    specifications: {
-      'Contact Type': 'NO/NC',
-      'Operating Voltage': '12V DC',
-      'Profile': 'Slim 15mm',
-      'Material': 'Brushed Aluminum',
-      'Dimensions': '86 x 86 x 15mm'
-    },
-    stock_quantity: 28,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
-  },
-  {
-    id: 'am-pb924b',
-    name: 'AM-PB924B Push Button',
-    description: 'Heavy-duty push button for industrial applications',
+    id: 'am-901b',
+    name: 'AM-901B Infrared Sensor Exit Button (No Touch)',
+    description: 'Stainless steel contactless IR exit button with LED indicator for quick, hygienic exit operation.',
     price: 75,
     category: 'Exit Buttons',
-    image_url: 'https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=500',
+    image_url: '/AM-901B.png',
     features: [
-      'Heavy-duty construction',
-      'Industrial grade',
-      'Weather resistant',
-      'Large button surface',
-      'Long service life'
+      'Contactless IR sensor',
+      'LED indicator',
+      'High sensitivity',
+      'Stainless steel panel'
     ],
     specifications: {
-      'Contact Type': 'NO/NC',
-      'Operating Voltage': '12-24V DC',
-      'Material': 'Stainless Steel',
-      'IP Rating': 'IP67',
-      'Dimensions': '92 x 92 x 25mm'
+      'Model': 'AM-901B',
+      'Dimension': '86 × 86 mm',
+      'Input voltage': '12/24 VDC',
+      'Output contact': 'NO/NC/COM',
+      'Sensing distance': '3-5 cm',
+      'Material': 'Stainless steel + ABS'
     },
-    stock_quantity: 35,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
+    stock_quantity: 120,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  },
+
+  // Electromagnetic Locks
+  {
+    id: 'acumatic-600',
+    name: 'Acumatic-600 Magnetic Lock',
+    description: 'Electromagnetic maglock for wooden, glass or metal doors. 280 kg (600 Lbs) holding force.',
+    price: 320,
+    category: 'Magnetic Locks',
+    image_url: '/Acumatic-600.png',
+    features: [
+      '280 kg (600 Lbs) holding force',
+      'Fail-safe (power to lock)',
+      'Hard anodized aluminium housing',
+      'Low power consumption'
+    ],
+    specifications: {
+      'Model': 'Acumatic-600',
+      'Lock body dimension': '250 × 48 × 26 mm',
+      'Armature plate dimension': '180 × 38 × 11 mm',
+      'Maximum thrust': '280 kg',
+      'Input voltage': '12 VDC',
+      'Working current': '450 mA'
+    },
+    stock_quantity: 40,
+    installation_instructions: `Installation Inside Frame
+1. Check off the contents and ensure you have the tools required.
+2. Use the drill template to install the mounting bracket Item 1A inside the door frame.
+3. Drill frame for cable entry and run cable for maglock.
+4. Fit the maglock to the bracket using 2 Security Screws Item 1C.
+5. Close the door and use the armature to mark the door for drilling.
+6. Fit the Armature (thread lock on 8) to the door.
+7. Make sure the Armature and mag lock are aligned.
+8. Use spacer washers to get the Armature plate and Mag Lock to just touch.
+9. Set the jumper to correct voltage, connect wiring and test.
+www.acusense.ae
+Adjust the gap between lock and armature plate by adding/removing spacer washers Items 13 & 14
+
+Installation Above Door
+1. Check off the contents and ensure you have the tools required.
+2. Use the drill template to install the L bracket Item 19 above the door.
+3. Check the door still closes.
+4. Remove Qty 2 screws and replace with counter sink screws.
+5. Fit the maglock to the L bracket using 2 Security Screws Item 1C.
+6. Assemble (thread lock on 20,21,) both Z plates and the Armature plate as shown.
+7. Close the door and use the Z plate to mark the door for drilling.
+8. Fit the Armature assembly to the door.
+9. Check that the Armature plate and mag lock are aligned.
+10. Use rubber spacer washers (or use alternate Z bracket fixing positions) to ensure that the Armature plate and Mag Lock just touch.
+11. Set the jumper to correct voltage, connect wiring and test. Replace cover plate.
+Adjust the gap between lock and armature plate by adding/removing spacer washers Items 13 & 14`,
+    instruction_images: [
+      '/Acumatic-600 instruct .png',
+      '/Acumatic-600 instruct 2 .png',
+      '/Acumatic-600 instruct 3.png',
+      '/Acumatic-600 instruct 4.png'
+    ],
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  },
+  {
+    id: 'acumatic-600l',
+    name: 'Acumatic-600L Magnetic Lock (Long Body)',
+    description: 'Long-body magnetic lock with 280 kg holding force, suitable for wider doors.',
+    price: 360,
+    category: 'Magnetic Locks',
+    image_url: '/Acumatic-600L.png',
+    features: [
+      '280 kg (600 Lbs) holding force',
+      'Long body design',
+      'Durable finish',
+      'Easy installation with bracket options'
+    ],
+    specifications: {
+      'Model': 'Acumatic-600L',
+      'Lock body dimension': '250 × 48 × 26 mm',
+      'Armature plate dimension': '180 × 38 × 11 mm',
+      'Maximum thrust': '280 kg',
+      'Input voltage': '12 VDC',
+      'Working current': '450 mA'
+    },
+    stock_quantity: 28,
+    installation_instructions: `Installation Inside Frame
+1. Check off the contents and ensure you have the tools required.
+2. Use the drill template to install the mounting bracket Item 1A inside the door frame.
+3. Drill frame for cable entry and run cable for maglock.
+4. Fit the maglock to the bracket using 2 Security Screws Item 1C.
+5. Close the door and use the armature to mark the door for drilling.
+6. Fit the Armature (thread lock on 8) to the door.
+7. Make sure the Armature and mag lock are aligned.
+8. Use spacer washers to get the Armature plate and Mag Lock to just touch.
+9. Set the jumper to correct voltage, connect wiring and test.
+www.acusense.ae
+Adjust the gap between lock and armature plate by adding/removing spacer washers Items 13 & 14
+
+Installation Above Door
+1. Check off the contents and ensure you have the tools required.
+2. Use the drill template to install the L bracket Item 19 above the door.
+3. Check the door still closes.
+4. Remove Qty 2 screws and replace with counter sink screws.
+5. Fit the maglock to the L bracket using 2 Security Screws Item 1C.
+6. Assemble (thread lock on 20,21,) both Z plates and the Armature plate as shown.
+7. Close the door and use the Z plate to mark the door for drilling.
+8. Fit the Armature assembly to the door.
+9. Check that the Armature plate and mag lock are aligned.
+10. Use rubber spacer washers (or use alternate Z bracket fixing positions) to ensure that the Armature plate and Mag Lock just touch.
+11. Set the jumper to correct voltage, connect wiring and test. Replace cover plate.
+Adjust the gap between lock and armature plate by adding/removing spacer washers Items 13 & 14`,
+    instruction_images: [
+      '/Acumatic-600L instruct 1.png',
+      '/Acumatic-600L instruct 2.png',
+      '/Acumatic-600L  instruct 3.png',
+      '/Acumatic-600L instruct 4.png'
+    ],
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  },
+
+  // Bolt Lock
+  {
+    id: 'acumatic-b850u',
+    name: 'Acumatic-B850U Electric Bolt Lock',
+    description: 'Electric bolt lock for frameless glass doors with high quality steel bolt and fail-safe operation.',
+    price: 420,
+    category: 'Electric Bolt Locks',
+    image_url: '/Acumatic-B850U.png',
+    features: [
+      'Instantaneous power to lock',
+      'High quality steel bolt',
+      'Low temperature design',
+      'LED lock status indicator'
+    ],
+    specifications: {
+      'Model': 'Acumatic-B850U',
+      'Lock size': '147 × 44 × 39 mm',
+      'Maximum thrust': '1000 kg',
+      'Input voltage': '12 VDC',
+      'Working current': '200 mA',
+      'Wires': '5 (NO/NC/COM/12V/GND)'
+    },
+    stock_quantity: 12,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  },
+
+  // Receivers
+  {
+    id: 'am-ur',
+    name: 'AM-UR Universal Receiver (2 Relay)',
+    description: 'Universal 433MHz receiver with wide input voltage and 2 relay outputs, suitable for remote learning.',
+    price: 110,
+    category: 'Receivers',
+    image_url: '/AM-UR.png',
+    features: [
+      'Power supply 9-36 VDC',
+      'Built-in antenna',
+      'Reception range up to 50m',
+      'Learning function'
+    ],
+    specifications: {
+      'Model': 'AM-UR',
+      'Dimension': '88 × 55 × 28 mm',
+      'Input voltage': '9-36 VDC',
+      'Output contact': 'NO/NC/COM',
+      'Frequency': '433MHz'
+    },
+    stock_quantity: 60,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  },
+
+  // Access Keypad
+  {
+    id: 'am-st-200em',
+    name: 'AM-ST-200EM Weatherproof Keypad Reader',
+    description: 'Standalone weatherproof EM keypad reader supporting cards and PINs, suitable for outdoor installations.',
+    price: 260,
+    category: 'Access Control',
+    image_url: '/AM-ST-200EM.png',
+    features: [
+      'Zinc alloy anti-vandal case',
+      'Supports 2000 users',
+      'Backlit keys',
+      'Card / PIN / Card+PIN'
+    ],
+    specifications: {
+      'Model': 'AM-ST-200EM',
+      'Dimension': '120 × 58 × 22 mm',
+      'IP rate': 'IP68',
+      'Input voltage': '12/24 VDC',
+      'Card reading frequency': 'EM 125KHz',
+      'User capacity': '2000'
+    },
+    stock_quantity: 30,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  },
+  // Additional Exit Buttons / Remotes / Accessories
+  {
+    id: 'am-s86b',
+    name: 'AM-S86B STAINLESS STEEL EXIT BUTTON',
+    description: 'Stainless steel surface mounted exit button suitable for gates, doors and exits.',
+    price: 48,
+    category: 'Exit Buttons',
+    image_url: '/AM-S86B.png',
+    features: [
+      'Stainless steel panel',
+      'Surface mounted',
+      'Vandal resistant',
+      'Suitable for narrow doorframes'
+    ],
+    specifications: {
+      'Model': 'AM-S86B',
+      'Dimension': '86 × 86 mm',
+      'Input voltage': '12 VDC',
+      'Output contact': 'NO/COM',
+      'Material': 'Stainless steel',
+      'Working temperature': '20 °C to 55 °C'
+    },
+    stock_quantity: 80,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
   },
   {
     id: 'am-rcwbp',
-    name: 'AM-RCWBP Wireless Exit Button',
-    description: 'Wireless exit button with long-range transmission',
-    price: 95,
+    name: 'AM-RCWBP WIRELESS PUSH TO EXIT BUTTON',
+    description: 'Wireless plastic exit button for simple push-to-exit operations; battery powered and surface mounted.',
+    price: 85,
     category: 'Exit Buttons',
-    image_url: 'https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=500',
+    image_url: '/AM-RCWBP.png',
     features: [
       'Wireless operation',
-      'Long-range transmission',
-      'Battery powered',
-      'Easy installation',
-      'No wiring required'
+      'Wide button for simple operation',
+      'Surface mounted',
+      '433MHz frequency'
     ],
     specifications: {
-      'Frequency': '433MHz',
-      'Range': 'Up to 150m',
-      'Battery': '12V A23',
-      'Operating Temperature': '-10°C to +50°C',
-      'Dimensions': '86 x 86 x 20mm'
+      'Model': 'AM-RCWBP',
+      'Dimension': '86 × 86 mm',
+      'Input voltage': '5-12 VDC',
+      'Output contact': 'NO/NC/COM',
+      'Remote distance': '20m',
+      'Material': 'ABS'
     },
-    stock_quantity: 15,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
+    stock_quantity: 65,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
   },
-  
-  // RFID Cards
+  {
+    id: 'am-rc-rt11',
+    name: 'AM-RC-RT11 WIRELESS REMOTE CONTROL',
+    description: 'Compact wireless remote control for access systems with convenient wiring and programming.',
+    price: 30,
+    category: 'Remote Controls',
+    image_url: '/AM-RC-RT11.png',
+    features: [
+      '433MHz frequency',
+      'Compact design',
+      'Easy wiring'
+    ],
+    specifications: {
+      'Model': 'AM-RC-RT11',
+      'Remote size': '60 × 30 mm',
+      'Input voltage': '5-12 VDC',
+      'Output contact': 'NO/NC/COM',
+      'Frequency': '433MHz',
+      'Study code': '1527'
+    },
+    stock_quantity: 140,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  },
+  {
+    id: 'am-pb924b',
+    name: 'AM-PB924B PLASTIC EXIT BUTTON',
+    description: 'Weather resistant plastic exit button with wide surface for easy operation.',
+    price: 22,
+    category: 'Exit Buttons',
+    image_url: '/AM-PB924B.png',
+    features: [
+      'Wide push surface',
+      'Surface mounted',
+      'Cost-effective'
+    ],
+    specifications: {
+      'Model': 'AM-PB924B',
+      'Dimension': '86 × 86 mm',
+      'Input voltage': '12 VDC',
+      'Output contact': 'NO/COM',
+      'Material': 'ABS'
+    },
+    stock_quantity: 120,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  },
   {
     id: 'am-mf-200',
-    name: 'AM-MF-200 RFID Cards (Pack of 10)',
-    description: 'Mifare 13.56MHz RFID cards for access control',
+    name: 'AM-MF-200 MIFARE THIN CARD (Pack of 10)',
+    description: 'MIFARE 13.56MHz printable PVC cards for access control and time attendance systems.',
     price: 25,
     category: 'RFID Cards',
-    image_url: 'https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&w=500',
+    image_url: '/AM-MF-200.png',
     features: [
-      'Mifare technology',
-      'High security',
-      'Durable PVC construction',
-      'Printable surface',
-      'Pack of 10 cards'
+      '13.56MHz MIFARE',
+      'Printable PVC',
+      'Pack of 10'
     ],
     specifications: {
+      'Model': 'AM-MF-200',
+      'Dimension': '86 × 54 × 0.8 mm',
       'Frequency': '13.56MHz',
-      'Technology': 'Mifare Classic 1K',
-      'Material': 'PVC',
-      'Thickness': '0.8mm',
-      'Dimensions': '85.5 x 54mm'
+      'Material': 'PVC'
     },
     stock_quantity: 200,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
   },
   {
     id: 'am-em-200',
-    name: 'AM-EM-200 EM Cards (Pack of 10)',
-    description: 'EM 125KHz proximity cards for access control',
+    name: 'AM-EM-200 EM PROXIMITY CARDS (Pack of 10)',
+    description: 'EM 125KHz proximity cards with unique serial numbers for access control systems.',
     price: 20,
     category: 'RFID Cards',
-    image_url: 'https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&w=500',
+    image_url: '/AM-EM-200.png',
     features: [
-      'EM technology',
-      'Long read range',
-      'Durable construction',
-      'Cost-effective',
-      'Pack of 10 cards'
+      '125KHz EM technology',
+      'Printable PVC',
+      'Pack of 10'
     ],
     specifications: {
+      'Model': 'AM-EM-200',
+      'Dimension': '86 × 54 × 0.8 mm',
       'Frequency': '125KHz',
-      'Technology': 'EM4100',
-      'Material': 'PVC',
-      'Thickness': '0.8mm',
-      'Dimensions': '85.5 x 54mm'
+      'Memory size': '64 bits'
     },
-    stock_quantity: 150,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
+    stock_quantity: 180,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
   },
-  
-  // Brackets & Accessories
+  {
+    id: 'am-eb4g',
+    name: 'AM-EB4G EMERGENCY BREAK GLASS - GREEN',
+    description: 'Emergency door release unit with break-glass operation; supports electrical control or access control systems.',
+    price: 38,
+    category: 'Exit Buttons',
+    image_url: '/AM-EB4G.png',
+    features: [
+      'Break glass emergency release',
+      'Surface or flush mount',
+      'Supports electrical control systems'
+    ],
+    specifications: {
+      'Model': 'AM-EB4G',
+      'Dimension': '86 × 86 × 50 mm',
+      'Input voltage': '5-36 VDC',
+      'Output contact': 'NO/NC/COM',
+      'Material': 'ABS'
+    },
+    stock_quantity: 75,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  },
   {
     id: 'am-bk-z600',
     name: 'AM-BK-Z600 Z-Bracket',
-    description: 'Z-bracket for magnetic lock installation',
-    price: 35,
+    description: 'Z-bracket for magnetic lock installation (600 Lbs models).',
+    price: 30,
     category: 'Brackets & Accessories',
-    image_url: 'https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=500',
+    image_url: '/AM-BK-Z600.png',
     features: [
-      'Z-shaped design',
-      'Adjustable mounting',
-      'Stainless steel construction',
-      'Easy installation',
-      'Universal compatibility'
+      'Z-shaped mounting bracket',
+      'Stainless steel',
+      'Adjustable mounting'
     ],
     specifications: {
-      'Material': 'Stainless Steel',
-      'Finish': 'Brushed',
-      'Compatibility': 'Most magnetic locks',
-      'Adjustment': '±5mm',
-      'Dimensions': '250 x 50 x 30mm'
+      'Model': 'AM-BK-Z600',
+      'L-bracket dimension': '238 × 30 × 47 mm',
+      'Z-bracket dimension': '185 × 44 × 100 mm'
     },
     stock_quantity: 60,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
   },
   {
     id: 'am-bk-u600',
     name: 'AM-BK-U600 U-Bracket',
-    description: 'U-bracket for magnetic lock installation',
-    price: 30,
+    description: 'U-bracket for lower-edge frameless glass doors (600 Lbs models).',
+    price: 28,
     category: 'Brackets & Accessories',
-    image_url: 'https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=500',
+    image_url: '/AM-BK-U600.png',
     features: [
-      'U-shaped design',
-      'Standard mounting',
-      'Stainless steel construction',
-      'Cost-effective',
-      'Universal compatibility'
+      'U-shaped bracket',
+      'Aluminium alloy',
+      'Suitable for lower edge frameless glass door'
     ],
     specifications: {
-      'Material': 'Stainless Steel',
-      'Finish': 'Brushed',
-      'Compatibility': 'Most magnetic locks',
-      'Type': 'Standard U-bracket',
-      'Dimensions': '250 x 45 x 25mm'
+      'Model': 'AM-BK-U600',
+      'Dimension': '180 × 24.5 × 38.8 mm'
     },
-    stock_quantity: 75,
-    created_at: '2025-01-01T00:00:00Z',
-    updated_at: '2025-01-01T00:00:00Z'
+    stock_quantity: 45,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
   }
 ];
 
 export const categories = [
+  'Remote Controls',
+  'Receivers',
+  'Exit Buttons',
   'Magnetic Locks',
   'Electric Bolt Locks',
-  'Access Control Keypads',
-  'Remote Controls & Receivers',
-  'Exit Buttons',
+  'Access Control',
   'RFID Cards',
   'Brackets & Accessories'
 ];

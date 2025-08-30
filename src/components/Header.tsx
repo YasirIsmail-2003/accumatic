@@ -14,13 +14,19 @@ const Header: React.FC = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    getCurrentUser().then(setUser);
-    
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      setUser(session?.user || null);
-    });
+    let unsub: (() => void) | null = null;
+    getCurrentUser().then(setUser).catch(() => {});
 
-    return () => subscription.unsubscribe();
+    try {
+      const maybeSub = (supabase as any)?.auth?.onAuthStateChange?.((event: any, session: any) => {
+        setUser(session?.user || null);
+      });
+      unsub = maybeSub?.data?.subscription?.unsubscribe || null;
+    } catch (e) {
+      // supabase not configured — ignore
+    }
+
+    return () => { if (unsub) unsub(); };
   }, []);
 
   const handleSearch = (e: React.FormEvent) => {
@@ -32,7 +38,11 @@ const Header: React.FC = () => {
   };
 
   const handleSignOut = async () => {
-    await supabase.auth.signOut();
+    try {
+      await (supabase as any)?.auth?.signOut?.();
+    } catch (e) {
+      // ignore
+    }
     navigate('/');
   };
 
@@ -43,8 +53,8 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="/public/Acumatic_updated tranparent.fw (1).png" 
-              alt="Accumatic Logo" 
+              src="/placeholder.png" 
+              alt="Acumatic Logo" 
               className="h-10 w-auto"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
@@ -55,7 +65,7 @@ const Header: React.FC = () => {
               className="text-2xl font-bold text-[#8A1538] hidden"
               style={{ display: 'none' }}
             >
-              Accumatic
+              Acumatic
             </span>
           </Link>
 
