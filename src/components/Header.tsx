@@ -53,7 +53,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="/acumatic-logo.png" 
+              src="/Acumatic_updated tranparent.fw (1).png" 
               alt="Acumatic Logo" 
               className="h-10 w-auto object-contain"
               onError={(e) => {
