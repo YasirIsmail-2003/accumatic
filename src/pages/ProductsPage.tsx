@@ -8,6 +8,7 @@ const ProductsPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('name');
+  // price removed — hide price range filter
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000]);
   const [showFilters, setShowFilters] = useState(false);
 
@@ -32,18 +33,15 @@ const ProductsPage: React.FC = () => {
       );
     }
 
-    // Filter by price range
-    filtered = filtered.filter(product =>
-      product.price >= priceRange[0] && product.price <= priceRange[1]
-    );
+    // Price filtering disabled (prices removed)
 
     // Sort products
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
-          return a.price - b.price;
+          return 0;
         case 'price-high':
-          return b.price - a.price;
+          return 0;
         case 'name':
           return a.name.localeCompare(b.name);
         default:
@@ -133,23 +131,7 @@ const ProductsPage: React.FC = () => {
                 </div>
 
                 {/* Price Range */}
-                <div>
-                  <h4 className="font-medium text-gray-900 mb-3">Price Range (AED)</h4>
-                  <div className="space-y-2">
-                    <input
-                      type="range"
-                      min="0"
-                      max="1000"
-                      value={priceRange[1]}
-                      onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
-                      className="w-full accent-[#8A1538]"
-                    />
-                    <div className="flex justify-between text-sm text-gray-600">
-                      <span>AED {priceRange[0]}</span>
-                      <span>AED {priceRange[1]}</span>
-                    </div>
-                  </div>
-                </div>
+                {/* Price filter removed since prices are not shown */}
 
                 <button
                   onClick={clearFilters}

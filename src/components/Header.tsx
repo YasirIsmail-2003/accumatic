@@ -149,14 +149,7 @@ const Header: React.FC = () => {
               </Link>
             )}
             
-            <Link to="/cart" className="relative text-gray-700 hover:text-[#8A1538] transition-colors">
-              <ShoppingCart className="h-6 w-6" />
-              {state.itemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-[#8A1538] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  {state.itemCount}
-                </span>
-              )}
-            </Link>
+            {/* Cart removed per request */}
 
             {/* Mobile menu button */}
             <button

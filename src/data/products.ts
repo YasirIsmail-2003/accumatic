@@ -6,7 +6,7 @@ export const products: Product[] = [
     id: 'am-b4',
     name: 'AM-B4 UNIVERSAL WIRELESS REMOTE (4 Button)',
     description: 'Universal 4-button wireless remote control - 433MHz. Copy coding, suitable for access control and gates.',
-    price: 45,
+    // price removed
     category: 'Remote Controls',
     image_url: '/AM-B4.png',
     features: [
@@ -27,7 +27,7 @@ export const products: Product[] = [
       'Working humidity': '0 to 95% RH',
       'Weight': '0.15kg'
     },
-    stock_quantity: 200,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -35,7 +35,7 @@ export const products: Product[] = [
     id: 'am-b2',
     name: 'AM-B2 UNIVERSAL WIRELESS REMOTE (2 Button)',
     description: 'Universal 2-button wireless remote control - 433MHz. Copy coding, compact and reliable.',
-    price: 35,
+    // price removed
     category: 'Remote Controls',
     image_url: '/AM-B2.png',
     features: [
@@ -57,7 +57,7 @@ export const products: Product[] = [
       'Working humidity': '0 to 95% RH',
       'Weight': '0.15kg'
     },
-    stock_quantity: 180,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -67,7 +67,7 @@ export const products: Product[] = [
     id: 'am-901b-r',
     name: 'AM-901B-R Infrared Sensor Exit Button (With Remote)',
     description: 'Infrared no-touch sensor exit button with wireless remote. Dual activation: IR induction and remote control.',
-    price: 95,
+    // price removed
     category: 'Exit Buttons',
     image_url: '/AM-901B-R.png',
     features: [
@@ -88,7 +88,7 @@ export const products: Product[] = [
       'Time delay': '5-30s',
       'User capacity': '30'
     },
-    stock_quantity: 75,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -96,7 +96,7 @@ export const products: Product[] = [
     id: 'am-901b',
     name: 'AM-901B Infrared Sensor Exit Button (No Touch)',
     description: 'Stainless steel contactless IR exit button with LED indicator for quick, hygienic exit operation.',
-    price: 75,
+    // price removed
     category: 'Exit Buttons',
     image_url: '/AM-901B.png',
     features: [
@@ -113,7 +113,7 @@ export const products: Product[] = [
       'Sensing distance': '3-5 cm',
       'Material': 'Stainless steel + ABS'
     },
-    stock_quantity: 120,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -123,7 +123,7 @@ export const products: Product[] = [
     id: 'acumatic-600',
     name: 'Acumatic-600 Magnetic Lock',
     description: 'Electromagnetic maglock for wooden, glass or metal doors. 280 kg (600 Lbs) holding force.',
-    price: 320,
+    // price removed
     category: 'Magnetic Locks',
     image_url: '/Acumatic-600.png',
     features: [
@@ -140,7 +140,7 @@ export const products: Product[] = [
       'Input voltage': '12 VDC',
       'Working current': '450 mA'
     },
-    stock_quantity: 40,
+    // stock info removed
     installation_instructions: `Installation Inside Frame
 1. Check off the contents and ensure you have the tools required.
 2. Use the drill template to install the mounting bracket Item 1A inside the door frame.
@@ -168,10 +168,8 @@ Installation Above Door
 11. Set the jumper to correct voltage, connect wiring and test. Replace cover plate.
 Adjust the gap between lock and armature plate by adding/removing spacer washers Items 13 & 14`,
     instruction_images: [
-      '/Acumatic-600 instruct .png',
-      '/Acumatic-600 instruct 2 .png',
-      '/Acumatic-600 instruct 3.png',
-      '/Acumatic-600 instruct 4.png'
+      '/Acumatic-600 instruct 1.png',
+      '/Acumatic-600 instruct 2.png'
     ],
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
@@ -180,7 +178,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
     id: 'acumatic-600l',
     name: 'Acumatic-600L Magnetic Lock (Long Body)',
     description: 'Long-body magnetic lock with 280 kg holding force, suitable for wider doors.',
-    price: 360,
+    // price removed
     category: 'Magnetic Locks',
     image_url: '/Acumatic-600L.png',
     features: [
@@ -197,7 +195,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
       'Input voltage': '12 VDC',
       'Working current': '450 mA'
     },
-    stock_quantity: 28,
+    // stock info removed
     installation_instructions: `Installation Inside Frame
 1. Check off the contents and ensure you have the tools required.
 2. Use the drill template to install the mounting bracket Item 1A inside the door frame.
@@ -225,10 +223,8 @@ Installation Above Door
 11. Set the jumper to correct voltage, connect wiring and test. Replace cover plate.
 Adjust the gap between lock and armature plate by adding/removing spacer washers Items 13 & 14`,
     instruction_images: [
-      '/Acumatic-600L instruct 1.png',
-      '/Acumatic-600L instruct 2.png',
-      '/Acumatic-600L  instruct 3.png',
-      '/Acumatic-600L instruct 4.png'
+      '/Acumatic-600L instruct1.png',
+      '/Acumatic-600L instruct2.png'
     ],
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
@@ -239,7 +235,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
     id: 'acumatic-b850u',
     name: 'Acumatic-B850U Electric Bolt Lock',
     description: 'Electric bolt lock for frameless glass doors with high quality steel bolt and fail-safe operation.',
-    price: 420,
+    // price removed
     category: 'Electric Bolt Locks',
     image_url: '/Acumatic-B850U.png',
     features: [
@@ -256,7 +252,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
       'Working current': '200 mA',
       'Wires': '5 (NO/NC/COM/12V/GND)'
     },
-    stock_quantity: 12,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -266,7 +262,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
     id: 'am-ur',
     name: 'AM-UR Universal Receiver (2 Relay)',
     description: 'Universal 433MHz receiver with wide input voltage and 2 relay outputs, suitable for remote learning.',
-    price: 110,
+    // price removed
     category: 'Receivers',
     image_url: '/AM-UR.png',
     features: [
@@ -282,7 +278,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
       'Output contact': 'NO/NC/COM',
       'Frequency': '433MHz'
     },
-    stock_quantity: 60,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -292,7 +288,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
     id: 'am-st-200em',
     name: 'AM-ST-200EM Weatherproof Keypad Reader',
     description: 'Standalone weatherproof EM keypad reader supporting cards and PINs, suitable for outdoor installations.',
-    price: 260,
+    // price removed
     category: 'Access Control',
     image_url: '/AM-ST-200EM.png',
     features: [
@@ -309,7 +305,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
       'Card reading frequency': 'EM 125KHz',
       'User capacity': '2000'
     },
-    stock_quantity: 30,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -318,7 +314,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
     id: 'am-s86b',
     name: 'AM-S86B STAINLESS STEEL EXIT BUTTON',
     description: 'Stainless steel surface mounted exit button suitable for gates, doors and exits.',
-    price: 48,
+    // price removed
     category: 'Exit Buttons',
     image_url: '/AM-S86B.png',
     features: [
@@ -335,7 +331,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
       'Material': 'Stainless steel',
       'Working temperature': '20 °C to 55 °C'
     },
-    stock_quantity: 80,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -343,7 +339,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
     id: 'am-rcwbp',
     name: 'AM-RCWBP WIRELESS PUSH TO EXIT BUTTON',
     description: 'Wireless plastic exit button for simple push-to-exit operations; battery powered and surface mounted.',
-    price: 85,
+    // price removed
     category: 'Exit Buttons',
     image_url: '/AM-RCWBP.png',
     features: [
@@ -360,7 +356,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
       'Remote distance': '20m',
       'Material': 'ABS'
     },
-    stock_quantity: 65,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -368,7 +364,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
     id: 'am-rc-rt11',
     name: 'AM-RC-RT11 WIRELESS REMOTE CONTROL',
     description: 'Compact wireless remote control for access systems with convenient wiring and programming.',
-    price: 30,
+    // price removed
     category: 'Remote Controls',
     image_url: '/AM-RC-RT11.png',
     features: [
@@ -384,7 +380,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
       'Frequency': '433MHz',
       'Study code': '1527'
     },
-    stock_quantity: 140,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -392,7 +388,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
     id: 'am-pb924b',
     name: 'AM-PB924B PLASTIC EXIT BUTTON',
     description: 'Weather resistant plastic exit button with wide surface for easy operation.',
-    price: 22,
+    // price removed
     category: 'Exit Buttons',
     image_url: '/AM-PB924B.png',
     features: [
@@ -407,7 +403,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
       'Output contact': 'NO/COM',
       'Material': 'ABS'
     },
-    stock_quantity: 120,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -415,7 +411,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
     id: 'am-mf-200',
     name: 'AM-MF-200 MIFARE THIN CARD (Pack of 10)',
     description: 'MIFARE 13.56MHz printable PVC cards for access control and time attendance systems.',
-    price: 25,
+    // price removed
     category: 'RFID Cards',
     image_url: '/AM-MF-200.png',
     features: [
@@ -429,7 +425,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
       'Frequency': '13.56MHz',
       'Material': 'PVC'
     },
-    stock_quantity: 200,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -437,7 +433,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
     id: 'am-em-200',
     name: 'AM-EM-200 EM PROXIMITY CARDS (Pack of 10)',
     description: 'EM 125KHz proximity cards with unique serial numbers for access control systems.',
-    price: 20,
+    // price removed
     category: 'RFID Cards',
     image_url: '/AM-EM-200.png',
     features: [
@@ -451,7 +447,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
       'Frequency': '125KHz',
       'Memory size': '64 bits'
     },
-    stock_quantity: 180,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -459,7 +455,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
     id: 'am-eb4g',
     name: 'AM-EB4G EMERGENCY BREAK GLASS - GREEN',
     description: 'Emergency door release unit with break-glass operation; supports electrical control or access control systems.',
-    price: 38,
+    // price removed
     category: 'Exit Buttons',
     image_url: '/AM-EB4G.png',
     features: [
@@ -474,7 +470,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
       'Output contact': 'NO/NC/COM',
       'Material': 'ABS'
     },
-    stock_quantity: 75,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -482,7 +478,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
     id: 'am-bk-z600',
     name: 'AM-BK-Z600 Z-Bracket',
     description: 'Z-bracket for magnetic lock installation (600 Lbs models).',
-    price: 30,
+    // price removed
     category: 'Brackets & Accessories',
     image_url: '/AM-BK-Z600.png',
     features: [
@@ -495,7 +491,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
       'L-bracket dimension': '238 × 30 × 47 mm',
       'Z-bracket dimension': '185 × 44 × 100 mm'
     },
-    stock_quantity: 60,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   },
@@ -503,7 +499,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
     id: 'am-bk-u600',
     name: 'AM-BK-U600 U-Bracket',
     description: 'U-bracket for lower-edge frameless glass doors (600 Lbs models).',
-    price: 28,
+    // price removed
     category: 'Brackets & Accessories',
     image_url: '/AM-BK-U600.png',
     features: [
@@ -515,7 +511,7 @@ Adjust the gap between lock and armature plate by adding/removing spacer washers
       'Model': 'AM-BK-U600',
       'Dimension': '180 × 24.5 × 38.8 mm'
     },
-    stock_quantity: 45,
+    // stock info removed
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
   }

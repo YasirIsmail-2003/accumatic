@@ -18,7 +18,7 @@ const OrderConfirmationPage: React.FC = () => {
             Order Confirmed!
           </h1>
           <p className="text-xl text-gray-600 mb-2">
-            Thank you for your purchase from Accumatic
+            Thank you for your purchase from Acumatic
           </p>
           <p className="text-lg text-gray-500">
             Order Number: <span className="font-semibold text-[#8A1538]">{orderNumber}</span>

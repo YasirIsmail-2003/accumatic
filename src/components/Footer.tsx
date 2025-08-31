@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                 className="h-8 w-auto filter brightness-0 invert object-contain"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling!.style.display = 'block';
+                  (e.currentTarget.nextElementSibling as HTMLElement)!.style.display = 'block';
                 }}
               />
               <span 
@@ -133,7 +133,7 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2025 Accumatic. All rights reserved.
+            © 2025 Acumatic. All rights reserved.
           </p>
         </div>
       </div>

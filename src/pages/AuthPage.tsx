@@ -77,8 +77,8 @@ const AuthPage: React.FC = () => {
           </h2>
           <p className="mt-2 text-gray-600">
             {isSignUp 
-              ? 'Join Accumatic to access exclusive products and offers'
-              : 'Welcome back to Accumatic'
+              ? 'Join Acumatic to access exclusive products and offers'
+              : 'Welcome back to Acumatic'
             }
           </p>
           {!isSupabaseConfigured && (

@@ -1,21 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart, Eye } from 'lucide-react';
+import { Eye } from 'lucide-react';
 import { Product } from '../types';
-import { useCart } from '../contexts/CartContext';
 
 interface ProductCardProps {
   product: Product;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const { addToCart } = useCart();
-
-  const handleAddToCart = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    addToCart(product, 1);
-  };
+  // cart removed; keep product card simple
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 group">
@@ -38,19 +31,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             >
               <Eye className="h-5 w-5" />
             </Link>
-            <button
-              onClick={handleAddToCart}
-              className="bg-[#8A1538] text-white p-2 rounded-full hover:bg-[#7A1230] transition-colors"
-            >
-              <ShoppingCart className="h-5 w-5" />
-            </button>
+            {/* cart action removed */}
           </div>
         </div>
-        {product.stock_quantity < 10 && (
-          <div className="absolute top-2 right-2 bg-orange-500 text-white px-2 py-1 rounded text-xs font-medium">
-            Low Stock
-          </div>
-        )}
+        {/* stock info removed */}
       </div>
       
       <div className="p-4">
@@ -67,16 +51,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </p>
         
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-[#8A1538]">
-            AED {product.price.toLocaleString()}
-          </div>
-          <button
-            onClick={handleAddToCart}
-            className="bg-[#8A1538] text-white px-4 py-2 rounded-lg hover:bg-[#7A1230] transition-colors flex items-center space-x-2"
+          <div />
+          <a
+            href={`/${product.name.split(' ')[0]}.pdf`}
+            onClick={(e) => e.stopPropagation()}
+            className="text-sm text-[#8A1538] hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <ShoppingCart className="h-4 w-4" />
-            <span>Add to Cart</span>
-          </button>
+            Download Data Sheet
+          </a>
         </div>
       </div>
     </div>

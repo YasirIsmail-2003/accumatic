@@ -1,6 +1,6 @@
-# Accumatic E-commerce Website
+# Acumatic E-commerce Website
 
-A modern, fully-featured e-commerce website for Accumatic - a leading provider of door locking and access control products in Dubai, UAE.
+# A modern, fully-featured e-commerce website for Acumatic - a leading provider of door locking and access control products in Dubai, UAE.
 
 ## Features
 
@@ -108,4 +108,4 @@ The site is ready for Stripe integration:
 
 ## License
 
-© 2025 Accumatic. All rights reserved.
+© 2025 Acumatic. All rights reserved.

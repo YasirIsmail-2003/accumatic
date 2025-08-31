@@ -27,8 +27,7 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/products" element={<ProductsPage />} />
               <Route path="/product/:id" element={<ProductDetailPage />} />
-              <Route path="/cart" element={<CartPage />} />
-              <Route path="/checkout" element={<CheckoutPage />} />
+              {/* Cart and checkout routes removed per request */}
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/auth" element={<AuthPage />} />
               <Route path="/order-confirmation" element={<OrderConfirmationPage />} />

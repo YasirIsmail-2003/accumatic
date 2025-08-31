@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Shield, Target, Eye, Users, Award, Zap } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
@@ -9,12 +10,24 @@ const AboutPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              About Accumatic
+              About Acumatic
             </h1>
             <p className="text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto">
               Leading the future of access control solutions in the UAE with 
               innovative technology and unwavering commitment to security.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Distributor / Partners */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Distributor</h2>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <p className="text-gray-700 mb-2">Acusense — Official distributor and partner for Acumatic products in the UAE.</p>
+            <p className="text-gray-700">Website: <a href="https://www.acusense.ae" target="_blank" rel="noopener noreferrer" className="text-[#8A1538] hover:underline">www.acusense.ae</a></p>
+            <p className="text-gray-600 mt-4">For distribution enquiries, technical support, and supply chain requests, please contact Acusense via their website.</p>
           </div>
         </div>
       </section>
@@ -29,7 +42,7 @@ const AboutPage: React.FC = () => {
               </h2>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Accumatic stands at the forefront of access control innovation in the UAE, 
+                  Acumatic stands at the forefront of access control innovation in the UAE, 
                   providing cutting-edge door locking and security solutions that protect 
                   what matters most to our clients.
                 </p>
@@ -100,7 +113,7 @@ const AboutPage: React.FC = () => {
               Our Core Values
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide everything we do at Accumatic.
+              The principles that guide everything we do at Acumatic.
             </p>
           </div>
           
@@ -146,7 +159,7 @@ const AboutPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Accumatic?
+              Why Choose Acumatic?
             </h2>
           </div>
           

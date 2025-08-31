@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ShoppingCart, Heart, Share2, Check, Star } from 'lucide-react';
+import { Heart, Share2, Check, Star } from 'lucide-react';
 import { products } from '../data/products';
-import { useCart } from '../contexts/CartContext';
+// cart removed
 import ProductCard from '../components/ProductCard';
 
 const ProductDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const [quantity, setQuantity] = useState(1);
+  // cart removed — quantity not used
   const [selectedImage, setSelectedImage] = useState(0);
-  const { addToCart } = useCart();
 
   const product = products.find(p => p.id === id);
 
@@ -90,9 +89,34 @@ const ProductDetailPage: React.FC = () => {
     .filter(p => p.category === product.category && p.id !== product.id)
     .slice(0, 4);
 
-  const handleAddToCart = () => {
-    addToCart(product, quantity);
+  // addToCart removed
+
+  // attempt to find a matching pdf in public/ for product data sheet
+  const findPdfForProduct = () => {
+    const baseCandidates = [
+      product.id,
+      product.id.toUpperCase(),
+      product.name.split(' ')[0] || product.id,
+      product.name.replace(/\s+/g, '-'),
+    ];
+
+    const suffixes = ['.pdf', ' Data Sheet.pdf', '-datasheet.pdf', '-data-sheet.pdf'];
+
+    for (const base of baseCandidates) {
+      for (const suf of suffixes) {
+        const path = `/${base}${suf}`;
+        // we can't synchronously check file existence from client, but linking to it is fine; prefer the simple base
+        // return first candidate that likely matches naming like /Acumatic-600.pdf
+        // We'll favour exact id + .pdf first
+        if (suf === '.pdf') return path;
+      }
+    }
+
+    return null;
   };
+
+  const dataSheetHref = findPdfForProduct();
+
 
   const images = [product.image_url, product.image_url, product.image_url]; // Placeholder for multiple images
 
@@ -161,9 +185,6 @@ const ProductDetailPage: React.FC = () => {
                 {product.name}
               </h1>
               <div className="flex items-center space-x-4 mb-4">
-                <div className="text-3xl font-bold text-[#8A1538]">
-                  AED {product.price.toLocaleString()}
-                </div>
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
@@ -176,13 +197,7 @@ const ProductDetailPage: React.FC = () => {
               </p>
             </div>
 
-            {/* Stock Status */}
-            <div className="flex items-center space-x-2">
-              <Check className="h-5 w-5 text-green-500" />
-              <span className="text-green-600 font-medium">
-                {product.stock_quantity > 0 ? `In Stock (${product.stock_quantity} available)` : 'Out of Stock'}
-              </span>
-            </div>
+            {/* Stock status removed */}
 
             {/* Key Features */}
             <div>
@@ -199,33 +214,17 @@ const ProductDetailPage: React.FC = () => {
 
             {/* Add to Cart */}
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center space-x-4 mb-4">
-                <label className="text-gray-700 font-medium">Quantity:</label>
-                <div className="flex items-center border border-gray-300 rounded-lg">
-                  <button
-                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="px-3 py-2 text-gray-600 hover:text-gray-800"
-                  >
-                    -
-                  </button>
-                  <span className="px-4 py-2 border-x border-gray-300">{quantity}</span>
-                  <button
-                    onClick={() => setQuantity(quantity + 1)}
-                    className="px-3 py-2 text-gray-600 hover:text-gray-800"
-                  >
-                    +
-                  </button>
-                </div>
+              <div>
+                <a
+                  href={dataSheetHref ?? `/${product.name.split(' ')[0]}.pdf`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="inline-block w-full bg-white border border-gray-300 text-[#8A1538] py-3 px-6 rounded-lg font-semibold text-center hover:bg-gray-50 transition-colors"
+                >
+                  Download Data Sheet
+                </a>
               </div>
-              
-              <button
-                onClick={handleAddToCart}
-                disabled={product.stock_quantity === 0}
-                className="w-full bg-[#8A1538] hover:bg-[#7A1230] disabled:bg-gray-400 text-white py-3 px-6 rounded-lg font-semibold text-lg transition-colors flex items-center justify-center space-x-2"
-              >
-                <ShoppingCart className="h-5 w-5" />
-                <span>Add to Cart - AED {(product.price * quantity).toLocaleString()}</span>
-              </button>
             </div>
           </div>
         </div>

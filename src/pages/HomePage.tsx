@@ -52,13 +52,6 @@ const HomePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link
-                to="/products"
-                className="bg-[#8A1538] hover:bg-[#7A1230] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors flex items-center justify-center space-x-2"
-              >
-                <span>Shop Now</span>
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-              <Link
                 to="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors flex items-center justify-center"
               >
@@ -153,7 +146,7 @@ const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Accumatic?
+              Why Choose Acumatic?
             </h2>
           </div>
           
